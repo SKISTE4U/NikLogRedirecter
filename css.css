@@ -1,0 +1,122 @@
+/* Общие стили для красивого фона и шрифта */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Красивый, мягкий градиентный фон */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Начнем сверху, а не строго по центру экрана */
+    padding-top: 50px; /* Отступ сверху */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%; /* Ширина на мобильных */
+    max-width: 600px; /* Максимальная ширина на ПК/планшетах */
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон для контента */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Фотография профиля */
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover;
+    border: 5px solid #fff; /* Белая рамка */
+    box-shadow: 0 0 0 3px #6c63ff; /* Акцентная рамка */
+}
+
+/* Заголовки и описание */
+h1 {
+    font-weight: 600;
+    margin-top: 15px;
+    color: #6c63ff; /* Акцентный цвет */
+}
+
+.tagline {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+/* Стили для кнопок-ссылок */
+.links {
+    display: flex;
+    flex-direction: column; /* Кнопки одна под другой */
+    gap: 15px; /* Расстояние между кнопками */
+}
+
+.link-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6c63ff; /* Основной цвет кнопок */
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст и иконку */
+}
+
+/* Эффект при наведении (для ПК) */
+.link-button:hover {
+    background-color: #524ab8; /* Цвет потемнее при наведении */
+    transform: translateY(-2px); /* Небольшой подъем */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Специфические цвета для брендов (опционально) */
+.link-button i {
+    margin-right: 10px;
+}
+
+.instagram { background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); }
+.instagram:hover { filter: brightness(1.1); }
+
+.telegram { background-color: #0088cc; }
+.telegram:hover { background-color: #006b99; }
+
+.youtube { background-color: #ff0000; }
+.youtube:hover { background-color: #cc0000; }
+
+.vk { background-color: #4a76a8; }
+.vk:hover { background-color: #3a6698; }
+
+/* * АДАПТИВНОСТЬ (Media Query)
+ * Этот блок гарантирует, что на очень маленьких экранах 
+ * все останется читаемым и удобным.
+ */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 80%;
+        max-width: none;
+        border-radius: 5;
+        box-shadow: none;
+    }
+
+    body {
+        padding-top: 20px;
+        align-items: flex-start;
+    }
+
+    .link-button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
+
+.disabled_btn{
+    filter: grayscale(100%);
+}
